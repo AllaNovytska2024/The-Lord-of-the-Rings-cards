@@ -1,6 +1,6 @@
 const brothers = [
   {
-    name: "Frodo",
+    name: "Frodo-Фродо",
     height: 100,
     race: "hobbit",
     age: 30,
@@ -9,16 +9,16 @@ const brothers = [
       "https://static1.srcdn.com/wordpress/wp-content/uploads/2023/03/frodo-smiling-at-the-end-of-return-of-the-king.jpg",
   },
   {
-    name: "Legolas",
+    name: "Legolas-Леголас",
     height: 190,
     race: "elf",
     age: 500,
     hasMagic: true,
     image:
-      "https://image.vip.de/23232866/t/sE/v2/w1440/r1.5/-/ganz-schoen-wenig-orlando-bloom-verraet-die-hoehe-seiner-der-herr-der-ringe-gage-jpg--article-image-9147566-.jpg",
+      "images\Legolas.webp",
   },
   {
-    name: "Aragorn",
+    name: "Aragorn-Арагон",
     height: 180,
     race: "human",
     age: 50,
@@ -27,7 +27,7 @@ const brothers = [
       "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2020/04/lord-of-the-rings-aragorn-mission-impossible-actor.jpg",
   },
   {
-    name: "Gimli",
+    name: "Gimli-Гимли",
     height: 50,
     race: "dwarf",
     age: 200,
@@ -36,7 +36,7 @@ const brothers = [
       "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/11/gimli-s-wearing-the-helmet-given-by-groin-his-father.jpg",
   },
   {
-    name: "Gendalf",
+    name: "Gendalf-Гендольф",
     height: 200,
     race: "magician",
     age: 2000,
@@ -49,7 +49,7 @@ const brothers = [
 // сделали копию исходных данных для операцию с удалением
 const copyBrothers = [...brothers];
 
-const gallery = document.getElementById("grid-gallery");
+const gallery = document.getElementById("grid-gallery")
 const btnMagic = document.getElementById("btn-magic");
 const btnDel = document.getElementById("btn-del");
 
