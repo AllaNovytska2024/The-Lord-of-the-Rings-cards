@@ -37,18 +37,18 @@ header {
   color: white;
 }
 
-nav > a {
+nav>a {
   margin-right: 10px;
   text-decoration: none;
   color: white;
 }
 
-nav > span {
+nav>span {
   cursor: pointer;
   font-size: 1.7rem;
 }
 
-nav > a:hover {
+nav>a:hover {
   text-decoration: underline;
 }
 
@@ -94,7 +94,7 @@ p {
   height: 200px;
 }
 
-.img-wrapper > img {
+.img-wrapper>img {
   /* за счет этих свойств картинка растягивается равномерно по размеру контейнера-родителя */
   object-fit: cover;
   /* приоритет top по вертикали  */
@@ -123,6 +123,25 @@ footer {
   display: none;
 }
 
+.btn-container {
+  margin-bottom: 15px;
+}
+
+.btn-magic {
+  background-color: rgb(255, 215, 255);
+}
+
+.btn-del {
+  background-color: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-container > button {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
 /* c помощью media queries можно указать css свойства которы будут срабатывать для устройств разной ширины */
 
 @media (max-width: 740px) {
@@ -130,7 +149,7 @@ footer {
     background-color: rgb(189, 68, 68);
   } */
 
-  nav > a {
+  nav>a {
     /* прячем все ссылки из меню */
     display: none;
   }

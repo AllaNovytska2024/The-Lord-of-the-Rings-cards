@@ -1,4 +1,3 @@
-
 const brothers = [
   {
     name: "Frodo",
@@ -7,7 +6,7 @@ const brothers = [
     age: 30,
     hasMagic: false,
     image:
-      "https://static1.srcdn.com/wordpress/wp-content/uploads/2023/03/frodo-smiling-at-the-end-of-return-of-the-king.jpg"
+      "https://static1.srcdn.com/wordpress/wp-content/uploads/2023/03/frodo-smiling-at-the-end-of-return-of-the-king.jpg",
   },
   {
     name: "Legolas",
@@ -16,7 +15,7 @@ const brothers = [
     age: 500,
     hasMagic: true,
     image:
-      "https://image.vip.de/23232866/t/sE/v2/w1440/r1.5/-/ganz-schoen-wenig-orlando-bloom-verraet-die-hoehe-seiner-der-herr-der-ringe-gage-jpg--article-image-9147566-.jpg"
+      "https://image.vip.de/23232866/t/sE/v2/w1440/r1.5/-/ganz-schoen-wenig-orlando-bloom-verraet-die-hoehe-seiner-der-herr-der-ringe-gage-jpg--article-image-9147566-.jpg",
   },
   {
     name: "Aragorn",
@@ -25,7 +24,7 @@ const brothers = [
     age: 50,
     hasMagic: false,
     image:
-      "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2020/04/lord-of-the-rings-aragorn-mission-impossible-actor.jpg"
+      "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2020/04/lord-of-the-rings-aragorn-mission-impossible-actor.jpg",
   },
   {
     name: "Gimli",
@@ -34,7 +33,7 @@ const brothers = [
     age: 200,
     hasMagic: false,
     image:
-      "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/11/gimli-s-wearing-the-helmet-given-by-groin-his-father.jpg"
+      "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/11/gimli-s-wearing-the-helmet-given-by-groin-his-father.jpg",
   },
   {
     name: "Gendalf",
@@ -42,17 +41,17 @@ const brothers = [
     race: "magician",
     age: 2000,
     hasMagic: true,
-    image: "https://cdn-media-ie.pearltrees.com/d2/ab/13/d2ab13dfb949137aea3b21d370ca5e1f-xl.jpg"
-  }
+    image:
+      "https://cdn-media-ie.pearltrees.com/d2/ab/13/d2ab13dfb949137aea3b21d370ca5e1f-xl.jpg",
+  },
 ];
 
-const copyBrothers = [...brothers]
-
+// сделали копию исходных данных для операцию с удалением
+const copyBrothers = [...brothers];
 
 const gallery = document.getElementById("grid-gallery");
 const btnMagic = document.getElementById("btn-magic");
 const btnDel = document.getElementById("btn-del");
-
 
 // функция для очистки галереи
 function cleanGallery() {
@@ -65,7 +64,7 @@ function cleanGallery() {
 
 // функция создания карточек
 function createCards(arr) {
-  arr.map(brother => {
+  arr.map((brother) => {
     // создаем карточку
     const card = document.createElement("div");
     card.className = "grid-card";
@@ -86,10 +85,12 @@ function createCards(arr) {
     card.appendChild(wrapper);
     // создаем параграф
     const p = document.createElement("p");
-    p.innerText = `This is ${brother.race}. His height is ${brother.height}. He is ${
-      brother.age
-    } years old. ${
-      brother.hasMagic ? "He uses magic 🪄" : "Unfortunately, no magic for this character..."
+    p.innerText = `This is ${brother.race}. His height is ${
+      brother.height
+    }. He is ${brother.age} years old. ${
+      brother.hasMagic
+        ? "He uses magic 🪄"
+        : "Unfortunately, no magic for this character..."
     }`;
     card.appendChild(p);
     // добавляем карточку к галерее
@@ -97,40 +98,21 @@ function createCards(arr) {
   });
 }
 
-
-
-brothers.map(brothers => {
-    const card = document.createElement("div");
-    card.className= 'grid-card';
-    const h4 = document.createElement("h4");
-    h4.innerText = brothers.className
-    card.appendChild(h4)
-    const wrapper= document.createElement('div');
-    wrapper.className= 'ímg-wrapper'
-    const img = document.createElement('img')
-    img.arc = brothers.img
-  //  console.log(img);
-  wrapper.appendChild(img)
-  
-
-})
-
 // вызов создания с исходным массивом
-createCards(brothers)
+createCards(brothers);
 
 btnMagic.addEventListener("click", () => {
-  const magicBrothers = brothers.filter(brother => brother.hasMagic === true);
+  const magicBrothers = brothers.filter((brother) => brother.hasMagic === true);
   cleanGallery();
   // вызов создания с отфильтрованным массивом
-  createCards(magicBrothers)
+  createCards(magicBrothers);
 });
 
-btnDel.addEventListener('click', ()=> {
+btnDel.addEventListener("click", () => {
   // удалили последний элемент
-  copyBrothers.pop()
+  copyBrothers.pop();
   // почистили галерею
   cleanGallery();
   // создали новую галерею с измененным кол-вом карточек
-  createCards(copyBrothers)
-})
-
+  createCards(copyBrothers);
+});
