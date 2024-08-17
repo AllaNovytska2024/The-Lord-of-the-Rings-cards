@@ -37,18 +37,18 @@ header {
   color: white;
 }
 
-nav>a {
+nav > a {
   margin-right: 10px;
   text-decoration: none;
   color: white;
 }
 
-nav>span {
+nav > span {
   cursor: pointer;
   font-size: 1.7rem;
 }
 
-nav>a:hover {
+nav > a:hover {
   text-decoration: underline;
 }
 
@@ -67,9 +67,8 @@ h3 {
   font-size: 40px;
 }
 
-
 p {
-  font-size: 0.9rem;
+  font-size: 1, 5rem;
 }
 
 .grid-gallery {
@@ -84,7 +83,7 @@ p {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  background-color: #e9eae9;
+  background-color: black;
   padding: 18px;
 }
 
@@ -95,7 +94,7 @@ p {
   height: 200px;
 }
 
-.img-wrapper>img {
+.img-wrapper > img {
   /* за счет этих свойств картинка растягивается равномерно по размеру контейнера-родителя */
   object-fit: cover;
   /* приоритет top по вертикали  */
@@ -110,9 +109,9 @@ footer {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 50px;
+  height: 100px;
   padding: 8px;
-  background-color: #585860;
+  background-color: #858590;
   color: white;
   font-size: 0.8rem;
 }
@@ -129,12 +128,60 @@ footer {
 }
 
 .btn-magic {
-  background-color: rgb(255, 215, 255);
+  background-color: rgb(247, 233, 29);
+  color: rgb(24, 87, 79);
+  text-shadow: 8px 9px 15px;
+  text-decoration: rgb(82, 132, 116);
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif, bold;
+}
+
+.btn-human {
+  background-color: rgb(247, 54, 29);
+  color: rgb(244, 240, 26);
+  text-shadow: 8px 9px 15px;
+  text-decoration: rgb(82, 132, 116);
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+
+  font-family: "Times New Roman", Times, serif, bold;
+}
+
+.btn-hobbit {
+  background-color: rgb(36, 247, 29);
+  color: rgb(5, 37, 23);
+  text-shadow: 8px 9px 15px;
+  text-decoration: rgb(31, 37, 134);
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif, bold;
+}
+
+.btn-elf {
+  background-color: rgb(34, 70, 232);
+  color: rgb(199, 228, 216);
+  text-shadow: 8px 9px 15px;
+  text-decoration: rgb(243, 244, 202);
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif, bold;
 }
 
 .btn-del {
-  background-color: rgb(53, 53, 53);
+  background-color: rgba(103, 157, 96, 0.315);
   color: white;
+  color: rgb(24, 87, 79);
+  text-shadow: 8px 9px 15px;
+  text-decoration: rgb(82, 132, 116);
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif, bold;
 }
 
 .btn-container > button {
@@ -150,7 +197,7 @@ footer {
     background-color: rgb(189, 68, 68);
   } */
 
-  nav>a {
+  nav > a {
     /* прячем все ссылки из меню */
     display: none;
   }
@@ -173,12 +220,12 @@ footer {
 }
 
 .font-effect-fire-animation {
-  color: rgb(24, 87, 79);
+  color: rgb(198, 228, 224);
   text-shadow: 8px 9px 15px;
   text-decoration: rgb(82, 132, 116);
   text-align: center;
   font-style: italic;
- 
-  font-family: "Times New Roman", Times, serif;
+
+  font-family: "Times New Roman", Times, bold, serif;
 }
 /* 634px */
