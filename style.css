@@ -40,10 +40,12 @@ header {
 
 .ring {
   width: 100%;
-  height: 265px;
+  height: 245px;
   gap: 10px;
   padding: 8px 15px;
   background-image: url("https://cdn.informator.ua/@prod/media/ua/2022/02/08/620264c16b96b7.88727528.jpg");
+  
+ 
 }
 
 nav > a {
@@ -111,6 +113,8 @@ p {
   object-position: top center;
   width: 100%;
   height: 100%;
+  
+  
 }
 
 footer {
@@ -124,6 +128,9 @@ footer {
   color: white;
   font-size: 0.8rem;
   
+  grid-template-columns: 120px 120px 120px;
+  align-items: start;
+  justify-content: space-between;
 }
 
 .burger-menu {
@@ -281,20 +288,23 @@ footer {
 }
 
 .logoFooter{
-  margin: 8px;
+  margin: 0px 15px 45px;
   width: 100%;
   height: 100%;
-  
 }
 
 .span{
-  justify-content: left;
+  
+  justify-content: space-between;
   text-align: left;
-  margin: 3px 9px 28px 9px;
+  margin: 3px 9px 48px 9px;
+  color: #fcf014;
 }
 
 .button:hover {
   background-color: red;
+  border: #2b5e35;
+  border: 2px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
