@@ -194,6 +194,17 @@ footer {
   font-size: 18px;
   font-family: "Times New Roman", Times, serif, bold;
 }
+.btn-id{
+  background-color: rgba(185, 239, 177, 0.315);
+  color: white;
+  color: rgb(15, 47, 43);
+  text-shadow: 8px 9px 15px;
+  text-decoration: rgb(82, 132, 116);
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif, bold;
+}
 
 .btn-del {
   background-color: rgba(103, 157, 96, 0.315);
@@ -206,6 +217,8 @@ footer {
   font-size: 18px;
   font-family: "Times New Roman", Times, serif, bold;
 }
+
+
 
 .btn-container > button {
   border-radius: 5px;
