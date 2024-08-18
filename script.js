@@ -92,7 +92,7 @@ const brothers = [
   {
     name: "Gimli- ГИМЛИ",
     height: 50,
-    race: "gnome",
+    race: "dwarf",
     age: 200,
     hasMagic: false,
     image:
@@ -153,7 +153,7 @@ const brothers = [
   {
     name: "Gloin- ГЛОИН",
     height: 51,
-    race: "gnome",
+    race: "dwarf",
     age: 800,
     hasMagic: false,
     image:
@@ -171,7 +171,7 @@ const btnDel = document.getElementById("btn-del");
 const btnHuman = document.getElementById("btn-human");
 const btnHobbit = document.getElementById("btn-hobbit");
 const btnElf = document.getElementById("btn-elf");
-const btnGnome = document.getElementById("btn-gnome");
+const btnDwarf = document.getElementById("btn-dwarf");
 const btnId = document.getElementById("btn-id");
 
 // функция для очистки галереи
@@ -251,11 +251,11 @@ btnElf.addEventListener("click", () => {
   createCards(elfBrothers);
 });
 
-btnGnome.addEventListener("click", () => {
-  const gnomeBrothers = brothers.filter((brother) => brother.race === "gnome");
+btnDwarf.addEventListener("click", () => {
+  const dwarfBrothers = brothers.filter((brother) => brother.race === "dwarf");
   cleanGallery();
   // вызов создания с отфильтрованным массивом
-  createCards(gnomeBrothers);
+  createCards(dwarfBrothers);
 });
 
 btnDel.addEventListener("click", () => {
