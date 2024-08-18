@@ -41,7 +41,7 @@ header {
 .ring {
   width: 100%;
   height: 265px;
-  
+  gap: 10px;
   
   background-image: url("https://cdn.informator.ua/@prod/media/ua/2022/02/08/620264c16b96b7.88727528.jpg");
   
@@ -140,8 +140,19 @@ footer {
 }
 
 .btn-magic {
-  background-color: rgb(223, 216, 120);
-  color: rgb(218, 116, 6);
+  background-color: rgb(254, 247, 145);
+  color: rgb(125, 40, 17);
+  text-shadow: 8px 9px 15px;
+  text-decoration: rgb(82, 132, 116);
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif, bold;
+}
+
+.btn-gnome {
+  background-color: rgb(79, 74, 3);
+  color: rgb(202, 194, 185);
   text-shadow: 8px 9px 15px;
   text-decoration: rgb(82, 132, 116);
   text-align: center;
@@ -151,7 +162,7 @@ footer {
 }
 
 .btn-human {
-  background-color: rgba(156, 70, 59, 0.623);
+  background-color: rgb(171, 22, 3);
   color: rgb(244, 240, 26);
   text-shadow: 8px 9px 15px;
   text-decoration: rgb(82, 132, 116);
