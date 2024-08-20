@@ -273,3 +273,84 @@ btnId.addEventListener("click", () => {
   // вызов создания с отфильтрованным массивом
   createCards(idBrothers);
 });
+
+
+// 1. объявили переменные и положили в них ссылку на интерактивные элементы
+const btnMinus = document.querySelector("#counter-btn__minus");
+const btnPlus = document.querySelector("#counter-btn__plus");
+const counterValue = document.querySelector("#counter-value");
+
+// 2. создали переменную счетчик
+let counter = 0
+
+// 3. отдельно от слушателя событий создали функции описывающие действие, которое произойдет при обработке события
+const minusHandler = () => {
+  counter--
+  counterValue.textContent = counter
+}
+
+const plusHandler = () => {
+  counter++
+  counterValue.textContent = counter
+}
+
+
+// 4. передаем тип события и функцию с слушатель события
+btnMinus.addEventListener('click', minusHandler)
+btnPlus.addEventListener('click', plusHandler)
+
+const form = document.querySelector("#wish-form");
+const list = document.querySelector("#wish-list");
+const clearBtn = document.querySelector("#clear-btn");
+
+// * массив для желаний
+let wishArr = [];
+let wishes = [];
+
+// функция очищения элементов до того как делаем новый map измененного массива
+function clearList() {
+  while (list.firstChild) {
+    list.firstChild.remove();
+  }
+}
+
+// функция изменения статуса желания
+function changeStatus(e) {
+  e.target.classList.toggle("finished");
+}
+
+form.addEventListener("submit", e => {
+  // чтобы страница на событии submit  не перезагружалась мы обращаемся к необязательному параметру e (или event) который передает в функцию браузер. в нем содержится информация о произошедшем событии + мы можем управлять поведением формы
+  e.preventDefault();
+  // забирая данные из разных input не перепутайте name этого поля ввода
+  let wish = {
+    wish: e.target.wish.value.toLowerCase(),
+    desc: e.target.desc.value.toLowerCase()
+  };
+
+  //чистим значения формы
+  e.target.wish.value = "";
+  e.target.desc.value = "";
+
+  if (wishes.includes(wish.wish)) {
+    alert("You have already review this! Change your review ✨");
+  } else {
+    wishes.push(wish.wish);
+    wishArr.push(wish);
+    // чистим список от предыдущего вызова
+    clearList();
+    // создаем элемент для списка на основе массива
+    wishArr.map(el => {
+      const li = document.createElement("li");
+      // добавляем событие для свойства onclick  - аналог слушателя событий
+      li.onclick = changeStatus;
+      li.textContent = `${el.wish}: ${el.desc}`;
+      list.append(li);
+    });
+  }
+});
+
+clearBtn.addEventListener("click", () => {
+  clearList();
+  wishArr = [];
+});
