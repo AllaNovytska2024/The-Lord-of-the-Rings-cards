@@ -375,3 +375,32 @@ document.getElementById('nameForm').addEventListener('submit', function(event) {
           console.error('Ошибка:', error);
       });
 });
+
+
+
+
+const img = document.querySelector("#img-Wring");
+const btn = document.querySelector("#btn-upload-Wring");
+const stop = document.querySelector('#btn-stop-Wring')
+
+
+  
+
+// помимо цепочки из then() вы можете работать с результатом асинхронных запросов через синтаксис асинхронных функций async / await
+async function getWring() {
+  const res = await fetch("");
+  const data = await res.json();
+  img.src = data.message;
+}
+
+const interval = setInterval(() => {
+  getWring();
+}, 3000);
+
+btn.addEventListener("click", () => {
+  getWring();
+});
+
+stop.addEventListener('click', () => {
+  clearInterval(interval)
+})

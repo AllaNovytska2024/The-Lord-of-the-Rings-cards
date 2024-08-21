@@ -51,13 +51,15 @@
         <a href="">logout</a>
       </div>
 
-     
-
+   
     </header>
     <main>
       <h1 class="font-effect-fire-animation">
         WELCOME TO THE WORLD OF MAGIC AND LEGENDS
       </h1>
+
+
+
 
       <form id="wish-form">
         <h2 class="font-effect-fire-animation">--_--</h2>
@@ -125,12 +127,56 @@
     <footer >
       <div class="logoFooter" >
         <div class="logo"></div>
+
+
+     
+
+
+
         <div class="span">
           <span>
             practice   * * * @ author Alla Novytska * * * © 2024 * * *  
             Germany all right reserved</span>
         </div>
       </div>
+<div>
+  <div class="font-effect-fire-animation">
+      <img id="img-Wring" src="" alt=" Lord of the Rings Image" width="500">
+      </div>
+      <div >
+      <button id="btn-upload-Wring">Запусти слайдшоу фотографий !!</button>
+      <button id="btn-stop-Wring">Останови слайдшоу фотографий</button>
+  </div>
+      <script >
+          const img = document.querySelector("#img-Wring");
+          const btn = document.querySelector("#btn-upload-Wring");
+          const stop = document.querySelector('#btn-stop-Wring');
+  
+          const ACCESS_KEY = 'RV4VyrwX9TYe3Q43_L15';
+  
+          async function getWring() {
+              const res = await fetch(`https://api.unsplash.com/photos/random?query=lord+of+the+rings&client_id=${ACCESS_KEY}`);
+              const data = await res.json();
+              img.src = data.urls.full; // Используем правильное поле для URL изображения
+          }
+  
+          const interval = setInterval(() => {
+              getWring();
+          }, 3000);
+  
+          btn.addEventListener("click", () => {
+              getWring();
+          });
+  
+          stop.addEventListener('click', () => {
+              clearInterval(interval);
+          });
+      </script>
+</div>
     </footer>
+
+
+
+    
   </body>
 </html>

@@ -119,7 +119,7 @@ footer {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100px;
+  height: 200px;
   padding: 8px;
   background-color: #2b5e35;
   color: white;
@@ -411,4 +411,51 @@ h2{
 #name-result {
   margin-top: 20px;
   font-size: 1.2em;
+}
+
+
+
+.img-Wring {
+  width: 200px;
+}
+
+.btn-upload-Wring{
+  margin-bottom: 5px;
+
+  background-color: rgba(43, 211, 9, 0.315);
+  color: white;
+  color: rgb(15, 47, 43);
+  text-shadow: 8px 9px 15px;
+  text-decoration: rgb(82, 132, 116);
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif, bold;
+}
+
+
+.btn-stop-Wrin{
+  
+  background-color: rgba(43, 211, 9, 0.315);
+  color: white;
+  color: rgb(15, 47, 43);
+  text-shadow: 8px 9px 15px;
+  text-decoration: rgb(82, 132, 116);
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif, bold;
+}
+
+
+
+
+.random-img-container > button {
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  height: 26px;
+  width: 35px;
+  color: white;
+  background-color: rgb(204, 164, 32);
 }
