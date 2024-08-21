@@ -69,6 +69,7 @@ main {
 
 h1 {
   font-size: 1.2rem;
+  
 }
 
 h3 {
@@ -404,6 +405,9 @@ li:hover {
   background-color: rgb(147, 150, 173);
 }
 
+h2{
+  object-position: left;
+}
 #name-result {
   margin-top: 20px;
   font-size: 1.2em;
