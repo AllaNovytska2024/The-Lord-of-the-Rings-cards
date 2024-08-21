@@ -266,6 +266,23 @@ footer {
 
   font-family: "Times New Roman", Times, bold, serif;
 }
+
+.side-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color:  #2b5e35;
+  top:80px;
+  right: 0px;
+  width: 100%;
+  
+
+}
+
+.side-menu-hide{
+  display: none;
+  
+}
 /* 634px */
 
 .logo {
@@ -332,7 +349,7 @@ footer {
   background-color: rgb(147, 150, 173);
 }
 
-form>button {
+form > button {
   border: none;
   background-color: #b50543;
   color: white;
@@ -340,12 +357,9 @@ form>button {
   border-radius: 3px;
 }
 
-
-
-
 li:hover {
   cursor: pointer;
-  color: #cf0c36;;
+  color: #cf0c36;
 }
 
 .finished {
