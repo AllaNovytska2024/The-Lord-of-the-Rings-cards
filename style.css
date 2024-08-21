@@ -281,7 +281,7 @@ footer {
 
 .side-menu-hide{
   display: none;
-  
+
 }
 /* 634px */
 
@@ -369,4 +369,42 @@ li:hover {
 
 .clear-btn {
   background-color: #637c72;
+}
+
+
+
+
+
+.name-container {
+  text-align: left;
+  background: rgb(244, 226, 226);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nameInput {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.name-button {
+  padding: 10px 20px;
+  background-color: #a1afbd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.name-container > button:hover {
+  background-color: rgb(147, 150, 173);
+}
+
+#name-result {
+  margin-top: 20px;
+  font-size: 1.2em;
 }
